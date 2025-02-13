@@ -18,7 +18,8 @@ def chat():
         user_input = request.json.get("message", "")
 
         response = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-4o"
+,
             messages=[
                 {"role": "system", "content": "You are AiproducerPrompts, an assistant for Ableton Live users."},
                 {"role": "user", "content": user_input}
